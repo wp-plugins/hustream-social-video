@@ -99,7 +99,8 @@ function player_div($args){
 	}
 
 function add_plugin( $plugin_array ) {
-   $plugin_array['hustream_embed'] = '/wp-content/plugins/hustream/js/player.js';
+   $pd = plugin_dir_url(__FILE__);
+   $plugin_array['hustream_embed'] = $pd.'/js/player.js';
    return $plugin_array;
 }
 
